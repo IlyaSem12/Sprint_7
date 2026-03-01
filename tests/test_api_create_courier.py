@@ -15,8 +15,8 @@ class TestApiCreateCourier:
         pytest.param( "1", "Geralt",'Короткий пароль', id='short_password'),
         pytest.param( "Pass1234",'Пробелы в имени', "Geralt of Rivia", id='space_in_name'),
     ],)
-    def test_api_success_create_courier_view_response_true_and_status_code_201(self, api, password, firstName, message):
-        '''Тест проеряет регистрацию курьера через api и возвращает {ok: true} при успешной регистрации'''
+    def test_api_success_create_courier_view_response_true_and_status_code_201(self, api,delete_courier, password, firstName, message):
+        '''Тест проеряет регистрацию курьера через api, запрос возвращает {ok: true} при успешной регистрации'''
         allure.dynamic.title(f"Успешная регистрация курьера:{message}")
         login = generate_login()# генерируем уникальный лонгин
         payload = {
@@ -33,6 +33,8 @@ class TestApiCreateCourier:
         with allure.step('Проверяем тело ответа'):
             body = response.json()
             assert body.get("ok") is True, (f'Курьер не был создан. Ответ: {body}')
+        delete_courier["login"] = login
+        delete_courier["password"] = password
 
     @allure.title("Проверка уникальности курьера при регистрации")
     def test_api_fail_create_identical_courier_view_error_response_and_status_code_409(self, api, registration_courier):

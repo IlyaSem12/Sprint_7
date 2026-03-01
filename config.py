@@ -14,3 +14,13 @@ ERROR_REGISTRATION_INDENTICAL_COURIER = 'Этот логин уже исполь
 ERROR_REGISTRATION_MISSING_FIELD = 'Недостаточно данных для создания учетной записи'
 ERROR_LOGIN_MISSING_FIELD = 'Недостаточно данных для входа'
 ERROR_LOGIN = 'Учетная запись не найдена'
+DATA_ORDER = {
+    "firstName": "Naruto",
+    "lastName": "Uchiha",
+    "address": "Konoha, 142 apt.",
+    "metroStation": 4,
+    "phone": "+7 800 355 35 35",
+    "rentTime": 5,
+    "deliveryDate": "2020-06-06",
+    "comment": "Saske, come back to Konoha",
+}
