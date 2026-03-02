@@ -1,0 +1,26 @@
+#================CONSTANT URLS================
+BASE_URL = 'https://qa-scooter.praktikum-services.ru'
+COURIER_URL = f'/api/v1/courier'
+LOGIN_COURIER_URL = f'/api/v1/courier/login'
+CANCEL_ORDER_URL = f'/api/v1/orders/cancel'
+LIST_ORDER_URL = f'/api/v1/orders'
+TRACK_ORDER_URL = f'/api/v1/orders/track'
+ACCEPT_ORDER_URL = f'/api/v1/orders/accept/'
+CREATE_ORDER_URL = f'/api/v1/orders'
+PING_SERVER_URL = f'/api/v1/ping'
+SEARCH_METRO_URL = f'/api/v1/stations/search'
+#================DATA================
+ERROR_REGISTRATION_INDENTICAL_COURIER = 'Этот логин уже используется. Попробуйте другой.'
+ERROR_REGISTRATION_MISSING_FIELD = 'Недостаточно данных для создания учетной записи'
+ERROR_LOGIN_MISSING_FIELD = 'Недостаточно данных для входа'
+ERROR_LOGIN = 'Учетная запись не найдена'
+DATA_ORDER = {
+    "firstName": "Naruto",
+    "lastName": "Uchiha",
+    "address": "Konoha, 142 apt.",
+    "metroStation": 4,
+    "phone": "+7 800 355 35 35",
+    "rentTime": 5,
+    "deliveryDate": "2020-06-06",
+    "comment": "Saske, come back to Konoha",
+}
